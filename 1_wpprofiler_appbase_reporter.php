@@ -80,11 +80,17 @@ namespace WPProfiler\Reporter\AppBase {
 		function calculate( $data, &$hook_store, &$function_store, $level = 0 ) {
 			foreach ( $data['children'] as $child ) {
 				if ( ! isset( $hook_store[ $child['hook'] ] ) ) {
-					$hook_store[ $child['hook'] ] = [ 'name' => $child['hook'], 'functions' => [], 'time' => 0 ];
+					$hook_store[ $child['hook'] ] = [
+						'name'      => $child['hook'],
+						'functions' => [],
+						'time'      => 0,
+						'count'     => 0,
+					];
 				}
 				$current_hook = &$hook_store[ $child['hook'] ];
 
 				$current_hook['time'] += $child ['time'];
+				$current_hook['count'] ++;
 
 				if ( isset( $child['functions'] ) ) {
 					foreach ( $child['functions'] as $function ) {
