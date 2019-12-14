@@ -14,4 +14,4 @@ Once done, you can start querying AppBase via any of [their supported methods](h
 
 # Search Examples
 
-See [Example Searches](example-searches/) for starting points in querying and aggregating profiler data.
+See [Example Searches](example-searches/index.md) for starting points in querying and aggregating profiler data.
