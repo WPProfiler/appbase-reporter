@@ -10,3 +10,8 @@ A reporter to send profiler data to [AppBase.io](https://appbase.io) (Hosted [El
 * Since reports are processed via cron in a deferred/batched manner, It is recommended you use WP-CLI to ensure fast processing vs wp-cron.php or the default cron, but it will work regardless.
 
 Once done, you can start querying AppBase via any of [their supported methods](https://docs.appbase.io/docs/gettingstarted/QuickStart/) and have fun :)
+
+
+# Search Examples
+
+See [Example Searches](example-searches/) for starting points in querying and aggregating profiler data.
